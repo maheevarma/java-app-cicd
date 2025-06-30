@@ -6,7 +6,7 @@ phases:
       java: corretto11
     commands:
       - echo Installing Maven...
-      - apt-get update && apt-get install -y maven
+      - sudo yum update && sudo yum install -y maven
   build:
     commands:
       - mvn clean package

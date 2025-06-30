@@ -6,14 +6,13 @@ phases:
       java: corretto11
     commands:
       - echo Installing Maven manually...
-      - curl --retry 5 --retry-delay 5 --max-time 120 -O https://downloads.apache.org/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.tar.gz
+      - curl -L -O https://archive.apache.org/dist/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.tar.gz
+      - file apache-maven-3.9.6-bin.tar.gz
       - tar -xvzf apache-maven-3.9.6-bin.tar.gz
       - mv apache-maven-3.9.6 /opt/maven
-      - echo 'export M2_HOME=/opt/maven' >> ~/.bashrc
-      - echo 'export PATH=$M2_HOME/bin:$PATH' >> ~/.bashrc
       - export M2_HOME=/opt/maven
       - export PATH=$M2_HOME/bin:$PATH
-      - echo "Maven version:"
+      - echo Maven version:
       - /opt/maven/bin/mvn -v
   build:
     commands:

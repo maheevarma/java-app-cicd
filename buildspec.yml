@@ -13,7 +13,7 @@ phases:
       - echo 'export PATH=$M2_HOME/bin:$PATH' >> ~/.bashrc
       - export M2_HOME=/opt/maven
       - export PATH=$M2_HOME/bin:$PATH
-      - echo Maven version:
+      - echo "Maven version:"
       - /opt/maven/bin/mvn -v
   build:
     commands:

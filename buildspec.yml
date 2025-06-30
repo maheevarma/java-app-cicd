@@ -12,7 +12,7 @@ phases:
       - mv apache-maven-3.9.6 /opt/maven
       - export M2_HOME=/opt/maven
       - export PATH=$M2_HOME/bin:$PATH
-      - echo Maven version:
+      - echo Maven version:latest
       - /opt/maven/bin/mvn -v
   build:
     commands:
